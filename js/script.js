@@ -1,14 +1,20 @@
 console.log("Eloria Maison website loaded successfully.");
 
-// Eloria Maison - Wishlist
+
+// ==========================================
+// ELORIA MAISON
+// WISHLIST
+// ==========================================
 
 const heartButtons = document.querySelectorAll(".heart-btn");
 
-heartButtons.forEach(function(button) {
+heartButtons.forEach(function (button) {
 
-    button.addEventListener("click", function() {
+    button.addEventListener("click", function () {
 
         const icon = button.querySelector("i");
+
+        if (!icon) return;
 
         icon.classList.toggle("fa-regular");
         icon.classList.toggle("fa-solid");
@@ -22,41 +28,20 @@ heartButtons.forEach(function(button) {
     });
 
 });
-// ==============================
-// ELORIA MAISON
-// ==============================
 
 
-// WISHLIST
-
-const heartButtons = document.querySelectorAll(".heart-btn");
-
-heartButtons.forEach(function(button) {
-
-    button.addEventListener("click", function() {
-
-        const icon = button.querySelector("i");
-
-        if (!icon) return;
-
-        icon.classList.toggle("fa-regular");
-        icon.classList.toggle("fa-solid");
-
-    });
-
-});
-
-
+// ==========================================
 // SHOP FILTER
+// ==========================================
 
 const filters = document.querySelectorAll(".filter");
 const products = document.querySelectorAll(".shop-product");
 
-filters.forEach(function(filter) {
+filters.forEach(function (filter) {
 
-    filter.addEventListener("click", function() {
+    filter.addEventListener("click", function () {
 
-        filters.forEach(function(item) {
+        filters.forEach(function (item) {
             item.classList.remove("active");
         });
 
@@ -64,7 +49,7 @@ filters.forEach(function(filter) {
 
         const category = filter.dataset.category;
 
-        products.forEach(function(product) {
+        products.forEach(function (product) {
 
             if (
                 category === "all" ||
@@ -80,22 +65,202 @@ filters.forEach(function(filter) {
     });
 
 });
+
+
+// ==========================================
+// ADD TO BAG
+// ==========================================
+
+// ==========================================
+// ELORIA MAISON CART
+// ==========================================
+
+let cart = JSON.parse(localStorage.getItem("eloriaCart")) || [];
+
+
+// UPDATE CART COUNT
+function updateCartCount() {
+
+    const cartCount = document.getElementById("cart-count");
+
+    if (!cartCount) return;
+
+    cartCount.textContent = cart.length;
+}
+
+
+// ADD TO CART
+const addCartButtons = document.querySelectorAll(".add-cart");
+
+addCartButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+        const product = {
+            name: button.dataset.name,
+            price: Number(button.dataset.price),
+            image: button.dataset.image
+        };
+
+        cart.push(product);
+
+        localStorage.setItem(
+            "eloriaCart",
+            JSON.stringify(cart)
+        );
+
+        updateCartCount();
+
+        // Luxury button feedback
+        const originalText = button.textContent;
+
+        button.textContent = "ADDED TO BAG ✓";
+
+        button.classList.add("added");
+
+        setTimeout(function() {
+
+            button.textContent = originalText;
+
+            button.classList.remove("added");
+
+        }, 1500);
+
+        console.log("Added:", product);
+
+    });
+
+});
+
+
+// LOAD CART COUNT
+updateCartCount();
+
+
+
+
+// ==========================================
 // CONTACT FORM
+// ==========================================
 
 const contactForm = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
 if (contactForm) {
 
-    contactForm.addEventListener("submit", function(event) {
+    contactForm.addEventListener("submit", function (event) {
 
         event.preventDefault();
 
-        formMessage.textContent =
-            "Thank you for contacting Eloria Maison. We'll be in touch soon.";
+        if (formMessage) {
+
+            formMessage.textContent =
+                "Thank you for contacting Eloria Maison. We'll be in touch soon.";
+
+        }
 
         contactForm.reset();
 
     });
 
 }
+// ==========================================
+// CART PAGE
+// ==========================================
+
+const cartItemsContainer = document.getElementById("cartItems");
+const cartTotalElement = document.getElementById("cartTotal");
+
+function displayCart() {
+
+    if (!cartItemsContainer) return;
+
+    const savedCart =
+        JSON.parse(localStorage.getItem("eloriaCart")) || [];
+
+    cartItemsContainer.innerHTML = "";
+
+    if (savedCart.length === 0) {
+
+        cartItemsContainer.innerHTML = `
+            <div class="empty-cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <h2>Your bag is empty</h2>
+
+                <p>
+                    Discover something beautiful from Eloria Maison.
+                </p>
+
+                <a href="shop.html">CONTINUE SHOPPING</a>
+            </div>
+        `;
+
+        if (cartTotalElement) {
+            cartTotalElement.textContent = "Rs. 0";
+        }
+
+        return;
+    }
+
+    let total = 0;
+
+    savedCart.forEach(function (product, index) {
+
+        total += product.price;
+
+        const item = document.createElement("div");
+
+        item.classList.add("cart-item");
+
+        item.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+
+            <div class="cart-item-info">
+                <h3>${product.name}</h3>
+                <p>Rs. ${product.price.toLocaleString()}</p>
+            </div>
+
+            <button class="remove-item" data-index="${index}">
+                REMOVE
+            </button>
+        `;
+
+        cartItemsContainer.appendChild(item);
+
+    });
+
+    if (cartTotalElement) {
+        cartTotalElement.textContent =
+            "Rs. " + total.toLocaleString();
+    }
+
+
+    // Remove item
+
+    const removeButtons =
+        document.querySelectorAll(".remove-item");
+
+    removeButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const index = Number(button.dataset.index);
+
+            savedCart.splice(index, 1);
+
+            localStorage.setItem(
+                "eloriaCart",
+                JSON.stringify(savedCart)
+            );
+
+            displayCart();
+            updateCartCount();
+
+        });
+
+    });
+
+}
+
+displayCart();

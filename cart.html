@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eloria Maison | Shopping Bag</title>
+
+    <!-- YOUR MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="index.html">
+                    ELORIA
+                    <span>MAISON</span>
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="shop.html">Shop</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+
+            <div class="nav-icons">
+
+                <a href="shop.html" class="nav-icon">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+
+                <a href="cart.html" class="nav-icon cart-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= CART PAGE ================= -->
+
+    <main class="luxury-cart">
+
+        <section class="cart-hero">
+
+            <p class="cart-eyebrow">
+                YOUR COLLECTION
+            </p>
+
+            <div class="cart-heading">
+    <p>YOUR SELECTED PIECES</p>
+    <h1>Your Shopping Bag</h1>
+    <span></span>
+</div>
+
+           
+
+        </section>
+
+
+        <section class="cart-content">
+
+            <!-- PRODUCTS -->
+
+            <div class="cart-products">
+
+                <div id="cartItems"></div>
+
+            </div>
+
+
+            <!-- SUMMARY -->
+
+            <aside class="cart-summary">
+
+                <div class="summary-top">
+
+                    <span>
+                        ORDER SUMMARY
+                    </span>
+
+                </div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+
+                    <span id="cartTotal">
+                        Rs. 0
+                    </span>
+                </div>
+
+                <div class="summary-row small">
+                    <span>Shipping</span>
+
+                    <span>
+                        Calculated at checkout
+                    </span>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <span id="cartGrandTotal">
+                        Rs. 0
+                    </span>
+
+                </div>
+
+                <button class="checkout-btn">
+                    PROCEED TO CHECKOUT
+                </button>
+
+                <a href="shop.html" class="continue-shopping">
+                    CONTINUE SHOPPING
+                </a>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-logo">
+            ELORIA
+            <span>MAISON</span>
+        </div>
+
+        <p>
+            Timeless pieces, thoughtfully designed.
+        </p>
+
+        <div class="footer-bottom">
+            © 2026 Eloria Maison. All rights reserved.
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
