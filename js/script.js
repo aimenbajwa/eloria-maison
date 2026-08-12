@@ -169,7 +169,8 @@ if (contactForm) {
 // ==========================================
 
 const cartItemsContainer = document.getElementById("cartItems");
-const cartTotalElement = document.getElementById("cartTotal");
+const cartSubtotalElement = document.getElementById("cartTotal");
+const cartGrandTotalElement = document.getElementById("cartGrandTotal");
 
 function displayCart() {
 
@@ -180,6 +181,7 @@ function displayCart() {
 
     cartItemsContainer.innerHTML = "";
 
+    // EMPTY CART
     if (savedCart.length === 0) {
 
         cartItemsContainer.innerHTML = `
@@ -196,18 +198,23 @@ function displayCart() {
             </div>
         `;
 
-        if (cartTotalElement) {
-            cartTotalElement.textContent = "Rs. 0";
+        if (cartSubtotalElement) {
+            cartSubtotalElement.textContent = "Rs. 0";
+        }
+
+        if (cartGrandTotalElement) {
+            cartGrandTotalElement.textContent = "Rs. 0";
         }
 
         return;
     }
 
+    // CALCULATE TOTAL
     let total = 0;
 
     savedCart.forEach(function (product, index) {
 
-        total += product.price;
+        total += Number(product.price);
 
         const item = document.createElement("div");
 
@@ -218,7 +225,10 @@ function displayCart() {
 
             <div class="cart-item-info">
                 <h3>${product.name}</h3>
-                <p>Rs. ${product.price.toLocaleString()}</p>
+
+                <p>
+                    Rs. ${Number(product.price).toLocaleString()}
+                </p>
             </div>
 
             <button class="remove-item" data-index="${index}">
@@ -230,14 +240,19 @@ function displayCart() {
 
     });
 
-    if (cartTotalElement) {
-        cartTotalElement.textContent =
+    // UPDATE SUBTOTAL
+    if (cartSubtotalElement) {
+        cartSubtotalElement.textContent =
             "Rs. " + total.toLocaleString();
     }
 
+    // UPDATE GRAND TOTAL
+    if (cartGrandTotalElement) {
+        cartGrandTotalElement.textContent =
+            "Rs. " + total.toLocaleString();
+    }
 
-    // Remove item
-
+    // REMOVE ITEMS
     const removeButtons =
         document.querySelectorAll(".remove-item");
 
@@ -245,7 +260,8 @@ function displayCart() {
 
         button.addEventListener("click", function () {
 
-            const index = Number(button.dataset.index);
+            const index =
+                Number(button.dataset.index);
 
             savedCart.splice(index, 1);
 

@@ -3103,3 +3103,8 @@ img {
         padding: 25px;
     }
 }
+.logo,
+.logo a,
+.logo span {
+    color: #C49A8D !important;
+}
