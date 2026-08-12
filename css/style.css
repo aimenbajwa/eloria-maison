@@ -2006,789 +2006,7 @@ a {
     }
 
 }
-/* =================================
-   FINAL LUXURY NAVBAR
-================================= */
 
-.navbar {
-    width: 100%;
-    min-height: 82px;
-
-    padding: 18px 7%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    background: #ffffff;
-
-    border-bottom: 1px solid #f0e8e4;
-
-    position: relative;
-    z-index: 100;
-}
-
-
-/* LOGO */
-
-.logo {
-    display: flex;
-    flex-direction: column;
-
-    text-decoration: none;
-
-    color: #292321;
-}
-
-.logo span {
-    font-family: 'Playfair Display', serif;
-
-    font-size: 25px;
-
-    letter-spacing: 4px;
-}
-
-.logo small {
-    margin-top: 2px;
-
-    color: #b88b7e;
-
-    font-size: 7px;
-
-    letter-spacing: 5px;
-
-    text-align: center;
-}
-
-
-/* NAVIGATION */
-
-.navbar nav {
-    display: flex;
-
-    align-items: center;
-
-    gap: 35px;
-}
-
-.navbar nav a {
-    color: #403b39;
-
-    text-decoration: none;
-
-    font-size: 11px;
-
-    letter-spacing: .5px;
-
-    transition: .3s;
-}
-
-.navbar nav a:hover {
-    color: #b88b7e;
-}
-
-
-/* NAV ICON */
-
-.nav-icons a {
-    color: #403b39;
-
-    font-size: 16px;
-
-    text-decoration: none;
-
-    transition: .3s;
-}
-
-.nav-icons a:hover {
-    color: #b88b7e;
-}
-
-
-/* =================================
-   PRODUCT CARD POLISH
-================================= */
-
-.shop-product {
-    overflow: hidden;
-
-    transition:
-        transform .4s ease,
-        box-shadow .4s ease;
-}
-
-.shop-product:hover {
-    transform: translateY(-5px);
-
-    box-shadow: 0 15px 35px rgba(60, 40, 35, .08);
-}
-
-.shop-product-image {
-    aspect-ratio: 4 / 5;
-}
-
-.shop-product-image img {
-    height: 100%;
-
-    width: 100%;
-
-    object-fit: cover;
-}
-
-
-/* HEART BUTTON */
-
-.shop-product-image .heart-btn {
-    position: absolute;
-
-    top: 15px;
-
-    right: 15px;
-
-    width: 38px;
-
-    height: 38px;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: rgba(255,255,255,.95);
-
-    cursor: pointer;
-
-    z-index: 5;
-
-    color: #403b39;
-
-    transition: .3s;
-}
-
-.shop-product-image .heart-btn:hover {
-    color: #b88b7e;
-
-    transform: scale(1.08);
-}
-
-
-/* =================================
-   MOBILE NAVBAR
-================================= */
-
-@media (max-width: 650px) {
-
-    .navbar {
-        padding: 16px 5%;
-
-        flex-wrap: wrap;
-
-        gap: 15px;
-    }
-
-    .navbar nav {
-        order: 3;
-
-        width: 100%;
-
-        justify-content: center;
-
-        gap: 20px;
-
-        padding-top: 10px;
-    }
-
-    .navbar nav a {
-        font-size: 10px;
-    }
-
-    .logo span {
-        font-size: 21px;
-    }
-
-}
-/* =========================================
-   ELORIA MAISON — LUXURY CART
-========================================= */
-
-.luxury-cart-header {
-
-    min-height: 330px;
-
-    background:
-        linear-gradient(
-            rgba(255,255,255,.92),
-            rgba(248,239,235,.92)
-        );
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 70px 20px;
-
-}
-
-
-.luxury-cart-header p {
-
-    color: #b88b7e;
-
-    font-size: 9px;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 18px;
-
-}
-
-
-.luxury-cart-header h1 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: clamp(42px, 6vw, 68px);
-
-    font-weight: 400;
-
-    color: #302a28;
-
-    margin-bottom: 15px;
-
-}
-
-
-.luxury-cart-header h1 em {
-
-    color: #b88b7e;
-
-    font-style: italic;
-
-}
-
-
-.luxury-cart-header span {
-
-    color: #8a817d;
-
-    font-size: 12px;
-
-}
-
-
-/* =========================================
-   CART LAYOUT
-========================================= */
-
-.luxury-cart {
-
-    max-width: 1250px;
-
-    margin: auto;
-
-    padding: 90px 7%;
-
-    display: grid;
-
-    grid-template-columns: 1fr 380px;
-
-    gap: 80px;
-
-}
-
-
-/* LEFT */
-
-.cart-top {
-
-    display: flex;
-
-    align-items: end;
-
-    justify-content: space-between;
-
-    padding-bottom: 25px;
-
-    border-bottom: 1px solid #e8ded9;
-
-}
-
-
-.cart-label {
-
-    color: #b88b7e;
-
-    font-size: 8px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 8px;
-
-}
-
-
-.cart-top h2 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 32px;
-
-    font-weight: 400;
-
-    color: #302a28;
-
-}
-
-
-.cart-top > span {
-
-    color: #9a918d;
-
-    font-size: 9px;
-
-    letter-spacing: 1px;
-
-}
-
-
-/* =========================================
-   EMPTY CART
-========================================= */
-
-.luxury-empty {
-
-    text-align: center;
-
-    padding: 90px 20px;
-
-}
-
-
-.empty-icon {
-
-    width: 65px;
-
-    height: 65px;
-
-    border: 1px solid #d8c1ba;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin: 0 auto 25px;
-
-    color: #b88b7e;
-
-    font-size: 20px;
-
-}
-
-
-.luxury-empty > p {
-
-    color: #b88b7e;
-
-    font-size: 8px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 15px;
-
-}
-
-
-.luxury-empty h2 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 42px;
-
-    font-weight: 400;
-
-    line-height: 1.1;
-
-    color: #302a28;
-
-    margin-bottom: 18px;
-
-}
-
-
-.luxury-empty h2 em {
-
-    color: #b88b7e;
-
-    font-style: italic;
-
-}
-
-
-.luxury-empty > span {
-
-    display: block;
-
-    max-width: 380px;
-
-    margin: auto;
-
-    color: #8c8581;
-
-    font-size: 11px;
-
-    line-height: 1.8;
-
-}
-
-
-.luxury-empty a {
-
-    display: inline-block;
-
-    margin-top: 30px;
-
-    padding: 15px 30px;
-
-    background: #302a28;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 9px;
-
-    letter-spacing: 2px;
-
-    transition: .3s;
-
-}
-
-
-.luxury-empty a:hover {
-
-    background: #b88b7e;
-
-}
-
-
-/* =========================================
-   ORDER SUMMARY
-========================================= */
-
-.luxury-summary {
-
-    background: #faf6f4;
-
-    padding: 40px;
-
-    height: fit-content;
-
-    position: sticky;
-
-    top: 30px;
-
-}
-
-
-.summary-label {
-
-    color: #b88b7e;
-
-    font-size: 8px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 10px;
-
-}
-
-
-.luxury-summary h2 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 32px;
-
-    font-weight: 400;
-
-    margin-bottom: 35px;
-
-}
-
-
-.luxury-summary h2 em {
-
-    color: #b88b7e;
-
-    font-style: italic;
-
-}
-
-
-.summary-detail > div {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    margin-bottom: 20px;
-
-}
-
-
-.summary-detail span {
-
-    color: #77706c;
-
-    font-size: 11px;
-
-}
-
-
-.summary-detail strong {
-
-    color: #302a28;
-
-    font-size: 12px;
-
-}
-
-
-.shipping-text {
-
-    text-align: right;
-
-    max-width: 130px;
-
-    font-size: 9px !important;
-
-    line-height: 1.5;
-
-}
-
-
-.summary-divider {
-
-    height: 1px;
-
-    background: #ded3ce;
-
-    margin: 25px 0;
-
-}
-
-
-.summary-total {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    margin-bottom: 30px;
-
-}
-
-
-.summary-total span {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 20px;
-
-}
-
-
-.summary-total strong {
-
-    color: #b88b7e;
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 23px;
-
-}
-
-
-/* CHECKOUT */
-
-.luxury-checkout {
-
-    width: 100%;
-
-    padding: 17px;
-
-    border: none;
-
-    background: #302a28;
-
-    color: white;
-
-    font-family: 'Poppins', sans-serif;
-
-    font-size: 9px;
-
-    letter-spacing: 2px;
-
-    cursor: pointer;
-
-    transition: .3s;
-
-}
-
-
-.luxury-checkout:hover {
-
-    background: #b88b7e;
-
-}
-
-
-.luxury-checkout i {
-
-    margin-left: 12px;
-
-}
-
-
-/* CONTINUE */
-
-.continue-shopping {
-
-    display: block;
-
-    text-align: center;
-
-    margin-top: 20px;
-
-    color: #77706c;
-
-    font-size: 9px;
-
-    text-decoration: none;
-
-    letter-spacing: 1px;
-
-}
-
-
-.continue-shopping:hover {
-
-    color: #b88b7e;
-
-}
-
-
-/* =========================================
-   TRUST
-========================================= */
-
-.cart-trust {
-
-    margin-top: 40px;
-
-    padding-top: 25px;
-
-    border-top: 1px solid #e0d5d0;
-
-}
-
-
-.cart-trust div {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    margin-bottom: 15px;
-
-}
-
-
-.cart-trust i {
-
-    color: #b88b7e;
-
-    width: 18px;
-
-    text-align: center;
-
-}
-
-
-.cart-trust span {
-
-    color: #807873;
-
-    font-size: 9px;
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 850px) {
-
-    .luxury-cart {
-
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-
-        padding: 60px 6%;
-
-    }
-
-    .luxury-summary {
-
-        position: static;
-
-    }
-
-}
-
-
-@media (max-width: 550px) {
-
-    .luxury-cart-header {
-
-        min-height: 260px;
-
-    }
-
-    .luxury-cart-header h1 {
-
-        font-size: 42px;
-
-    }
-
-    .cart-top h2 {
-
-        font-size: 25px;
-
-    }
-
-    .luxury-summary {
-
-        padding: 28px;
-
-    }
-
-}
 /* =========================================
    ELORIA MAISON - LUXURY ADD TO BAG
 ========================================= */
@@ -2901,172 +2119,7 @@ a {
     color: #9b766c !important;
     border-bottom-color: #9b766c !important;
 }
-/* =========================================
-   ELORIA MAISON — CART PAGE
-========================================= */
 
-.cart-page {
-    max-width: 1100px;
-    margin: 100px auto;
-    padding: 0 30px;
-}
-
-.cart-heading {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.cart-heading p {
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: #a17b70;
-    margin-bottom: 10px;
-}
-
-.cart-heading h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    font-weight: 500;
-    color: #292321;
-}
-
-.cart-items {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.cart-item {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-
-    padding: 20px 0;
-
-    border-bottom: 1px solid #eee4df;
-}
-
-.cart-item img {
-    width: 110px;
-    height: 130px;
-    object-fit: cover;
-}
-
-.cart-item-info {
-    flex: 1;
-}
-
-.cart-item-info h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 21px;
-    font-weight: 500;
-    margin-bottom: 8px;
-}
-
-.cart-item-info p {
-    font-size: 13px;
-    color: #8f7068;
-}
-
-.remove-item {
-    background: none;
-    border: none;
-
-    color: #a17b70;
-
-    font-size: 11px;
-    letter-spacing: 1.5px;
-
-    cursor: pointer;
-}
-
-.remove-item:hover {
-    color: #6f5048;
-}
-
-.cart-summary {
-    max-width: 400px;
-    margin: 50px 0 0 auto;
-
-    padding-top: 25px;
-
-    border-top: 1px solid #d9c8c1;
-}
-
-.summary-row {
-    display: flex;
-    justify-content: space-between;
-
-    font-size: 14px;
-    letter-spacing: 1px;
-
-    margin-bottom: 25px;
-}
-
-.checkout-btn {
-    width: 100%;
-
-    padding: 15px;
-
-    background: #9b766c;
-    color: white;
-
-    border: none;
-
-    font-size: 10px;
-    letter-spacing: 2px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.checkout-btn:hover {
-    background: #76564d;
-}
-
-
-/* EMPTY CART */
-
-.empty-cart {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.empty-cart i {
-    font-size: 35px;
-    color: #c7aaa0;
-    margin-bottom: 20px;
-}
-
-.empty-cart h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.empty-cart p {
-    color: #8b817d;
-    font-size: 13px;
-}
-
-.empty-cart a {
-    display: inline-block;
-
-    margin-top: 25px;
-
-    color: #9b766c;
-
-    font-size: 10px;
-    letter-spacing: 2px;
-
-    text-decoration: none;
-
-    border-bottom: 1px solid #cdb4aa;
-
-    padding-bottom: 5px;
-}
 /* =====================================================
    ELORIA MAISON — LUXURY SHOPPING BAG
 ===================================================== */
@@ -3614,275 +2667,45 @@ a {
 }
 
 
-/* ================= MOBILE ================= */
-
-@media (max-width: 800px) {
-
-    .site-header .navbar {
-        padding: 20px 25px;
-
-        flex-wrap: wrap;
-
-        gap: 20px;
-    }
-
-    .site-header .nav-links {
-        order: 3;
-
-        width: 100%;
-
-        justify-content: center;
-
-        gap: 20px;
-    }
-
-    .site-header .nav-links a {
-        font-size: 9px;
-
-        letter-spacing: 1px;
-    }
-
-    .luxury-cart {
-        padding: 60px 25px;
-    }
-
-    .cart-hero h1 {
-        font-size: 38px;
-    }
-
-    .cart-content {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-    }
-
-    .cart-summary {
-        width: 100%;
-    }
-
-    .cart-item {
-        grid-template-columns: 90px 1fr;
-
-        gap: 18px;
-    }
-
-    .cart-item img {
-        width: 90px;
-
-        height: 110px;
-    }
-
-    .remove-item {
-        grid-column: 2;
-    }
-}
-/* ==========================================
-   ELORIA MAISON — CART COLOR MATCH
-   Matches About page
-========================================== */
-
-.luxury-cart {
-    background: #FBF7F4;
-}
-
-.cart-hero {
-    background: #FBF7F4;
-}
-
-.cart-eyebrow {
-    color: #C49A8D;
-}
-
-.cart-hero h1 {
-    color: #292525;
-}
-
-.cart-line {
-    background: #C49A8D;
-}
 
 
-/* CART PRODUCTS */
 
-.cart-item {
-    border-bottom: 1px solid #E9DDD8;
-}
-
-.cart-item-info h3 {
-    color: #292525;
-}
-
-.cart-item-info p {
-    color: #6F6561;
-}
-
-.remove-item {
-    color: #C49A8D;
-}
-
-.remove-item:hover {
-    color: #292525;
-}
-
-
-/* ORDER SUMMARY */
-
-.cart-summary {
-    background: #FFFFFF;
-    border: 1px solid #E9DDD8;
-}
-
-.summary-top span {
-    color: #C49A8D;
-}
-
-.summary-row {
-    color: #6F6561;
-}
-
-.summary-row.small {
-    color: #9B8E89;
-}
-
-.summary-divider {
-    background: #E9DDD8;
-}
-
-.summary-total {
-    color: #292525;
-}
-
-
-/* CHECKOUT BUTTON */
-
-.checkout-btn {
-    background: #C49A8D;
-    border-color: #C49A8D;
-    color: #FFFFFF;
-}
-
-.checkout-btn:hover {
-    background: #292525;
-    border-color: #292525;
-}
-
-
-/* CONTINUE SHOPPING */
-
-.continue-shopping {
-    color: #C49A8D;
-}
-
-.continue-shopping:hover {
-    color: #292525;
-}
-
-
-/* FOOTER */
-
-.site-footer {
-    background: #FBF7F4;
-    border-top: 1px solid #E9DDD8;
-}
-
-.footer-logo {
-    color: #292525;
-}
-
-.footer-logo span {
-    color: #C49A8D;
-}
-
-.site-footer p {
-    color: #6F6561;
-}
-
-.footer-bottom {
-    color: #9B8E89;
-}
-body {
-    background: #FBF7F4;
-}
-/* =========================
-   CART PAGE - LUXURY THEME
-========================= */
-
-.cart-page .logo {
-    color: #b88b7e;
-}
-
-.cart-page .logo span {
-    color: #b88b7e;
-}
-.logo {
-    color: #c49a8c;
-}
-
-.logo span {
-    color: #b88b7e;
-}
-.cart-heading {
-    text-align: center;
-    padding: 100px 20px 70px;
-    background: #fdf8f5;
-}
-
-.cart-heading p {
-    font-size: 11px;
-    letter-spacing: 5px;
-    color: #b88b7e;
-    margin-bottom: 20px;
-}
-
-.cart-heading h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 64px;
-    font-weight: 400;
-    color: #292321;
-    margin: 0;
-}
-
-.cart-heading span {
-    display: block;
-    width: 60px;
-    height: 1px;
-    background: #c99a8c;
-    margin: 35px auto 0;
-}
-.cart-page {
-    background: #fdf8f5;
-    color: #292321;
-}
-
-.cart-page .cart-heading {
-    background: #fdf8f5;
-}
-.logo,
-.logo span,
-.logo small {
-    color: #c49a8c !important;
-}
-/* =========================================
-   ELORIA MAISON — FINAL RESPONSIVE CSS
-========================================= */
+/* =====================================================
+   ELORIA MAISON — FINAL CLEAN MOBILE RESPONSIVE DESIGN
+===================================================== */
 
 html,
 body {
     width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
-/* ================= MOBILE ================= */
+img {
+    max-width: 100%;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
-    /* NAVBAR */
+    /* MAIN NAVBAR */
     .navbar {
+        height: auto;
         min-height: 75px;
-        padding: 16px 18px;
+        padding: 16px 6%;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .navbar nav {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .navbar nav a {
+        font-size: 9px;
     }
 
     .logo span {
@@ -3895,32 +2718,12 @@ body {
         letter-spacing: 4px;
     }
 
-    .navbar nav {
-        display: flex;
-        gap: 16px;
-    }
-
-    .navbar nav a {
-        font-size: 9px;
-        letter-spacing: 1px;
-    }
-
-    .nav-icons {
-        display: flex;
-        gap: 12px;
-    }
-
-    .nav-icons a {
-        font-size: 16px;
-    }
-
-
-    /* HOME HERO */
+    /* HOME */
     .hero {
         min-height: auto;
-        padding: 60px 20px;
+        padding: 60px 6%;
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 45px;
         text-align: center;
     }
 
@@ -3929,13 +2732,14 @@ body {
     }
 
     .hero h1 {
-        font-size: 42px;
-        line-height: 1.1;
+        font-size: 44px;
     }
 
     .hero-description {
         font-size: 13px;
         line-height: 1.8;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-buttons {
@@ -3944,135 +2748,148 @@ body {
     }
 
     .hero-image img {
-        width: 100%;
-        height: 420px;
-        object-fit: cover;
+        height: 470px;
     }
 
-
-    /* SHOP */
-    .shop-header {
-        padding: 70px 20px;
+    /* HOME CATEGORIES */
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .shop-header h1 {
-        font-size: 44px;
-        line-height: 1.1;
-    }
-
-    .shop-header > p:last-child {
-        font-size: 12px;
-    }
-
-
-    /* FILTERS */
-    .shop-filters {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-        padding: 20px 10px;
-    }
-
-    .filter {
-        font-size: 9px;
-    }
-
-
-    /* PRODUCTS */
+    /* HOME PRODUCTS */
     .product-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 25px 12px;
-        padding: 25px 15px;
-    }
-
-    .luxury-product {
-        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .product-image img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
+        height: 330px;
     }
 
-    .product-info {
-        padding: 12px 3px 18px;
+    /* PROMISE */
+    .promise-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .product-info h2 {
-        font-size: 16px;
+    /* BRAND STORY */
+    .brand-story {
+        grid-template-columns: 1fr;
+        gap: 45px;
     }
 
-    .product-info p {
-        font-size: 8px;
+    .story-content {
+        max-width: 100%;
     }
 
-    .price {
-        font-size: 11px;
+    /* SHOP */
+    .shop-header {
+        padding: 75px 6%;
     }
 
-    .add-bag {
-        font-size: 8px !important;
-        letter-spacing: 1.5px !important;
-        padding: 8px 0 !important;
+    .shop-header h1 {
+        font-size: 45px;
     }
 
+    .shop-section {
+        padding: 65px 6% 85px;
+    }
+
+    .shop-filters {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 15px;
+    }
+
+    .shop-product-image img {
+        height: 360px;
+    }
 
     /* ABOUT */
     .about-hero {
-        padding: 70px 20px;
+        padding: 80px 6%;
     }
 
     .about-hero h1 {
-        font-size: 44px;
-        line-height: 1.1;
+        font-size: 46px;
     }
 
     .about-story {
         grid-template-columns: 1fr;
-        padding: 60px 20px;
-        gap: 35px;
+        gap: 50px;
+        padding: 80px 6%;
+    }
+
+    .about-text {
+        max-width: 100%;
     }
 
     .about-image img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
+        height: 500px;
     }
 
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
 
     /* CONTACT */
     .contact-hero {
-        padding: 70px 20px;
+        padding: 80px 6%;
     }
 
     .contact-hero h1 {
-        font-size: 44px;
+        font-size: 46px;
     }
 
     .contact-section {
         grid-template-columns: 1fr;
-        padding: 60px 20px;
-        gap: 40px;
-    }
-
-    .contact-form-wrapper {
-        padding: 25px 20px;
+        gap: 55px;
+        padding: 80px 6%;
     }
 
     .form-row {
         grid-template-columns: 1fr;
     }
 
+    .contact-form-wrapper {
+        padding: 35px 25px;
+    }
 
-    /* CART */
+    /* FOOTER */
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    /* SHOPPING BAG */
+    .site-header .navbar {
+        min-height: 75px;
+        padding: 18px 25px;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .site-header .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .site-header .nav-links a {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
     .luxury-cart {
-        padding: 60px 18px 80px;
+        padding: 65px 25px 80px;
     }
 
     .cart-hero {
-        margin-bottom: 40px;
+        margin-bottom: 45px;
     }
 
     .cart-hero h1 {
@@ -4081,18 +2898,197 @@ body {
 
     .cart-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 45px;
+    }
+
+    .cart-summary {
+        width: 100%;
     }
 
     .cart-item {
-        grid-template-columns: 85px 1fr;
+        grid-template-columns: 90px 1fr;
+        gap: 18px;
+    }
+
+    .cart-item img {
+        width: 90px;
+        height: 110px;
+    }
+
+    .remove-item {
+        grid-column: 2;
+        justify-self: start;
+    }
+}
+
+@media (max-width: 550px) {
+
+    /* HOME */
+    .hero {
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .hero-image img {
+        height: 400px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        height: 400px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image img {
+        height: 400px;
+    }
+
+    .promise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter {
+        padding: 70px 6%;
+    }
+
+    .newsletter h2 {
+        font-size: 36px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    /* SHOP */
+    .shop-header {
+        padding: 65px 6%;
+    }
+
+    .shop-header h1 {
+        font-size: 38px;
+    }
+
+    .shop-section {
+        padding: 55px 5% 70px;
+    }
+
+    .shop-filters {
+        gap: 14px;
+    }
+
+    .shop-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 10px;
+    }
+
+    .shop-product-image img {
+        height: 230px;
+    }
+
+    .shop-product-info {
+        padding: 15px 2px;
+    }
+
+    .shop-product-info h3 {
+        font-size: 17px;
+    }
+
+    /* ABOUT */
+    .about-hero {
+        padding: 65px 6%;
+    }
+
+    .about-hero h1 {
+        font-size: 39px;
+    }
+
+    .about-story {
+        padding: 65px 6%;
+    }
+
+    .about-image img {
+        height: 400px;
+    }
+
+    .about-values {
+        padding: 70px 6%;
+    }
+
+    .about-quote {
+        padding: 85px 6%;
+    }
+
+    /* CONTACT */
+    .contact-hero {
+        padding: 65px 6%;
+    }
+
+    .contact-hero h1 {
+        font-size: 39px;
+    }
+
+    .contact-section {
+        padding: 65px 6%;
+    }
+
+    .contact-form-wrapper {
+        padding: 28px 20px;
+    }
+
+    /* SHOPPING BAG */
+    .site-header .navbar {
+        padding: 16px 18px;
+    }
+
+    .site-header .nav-links {
+        gap: 13px;
+    }
+
+    .site-header .nav-links a {
+        font-size: 8px;
+    }
+
+    .luxury-cart {
+        padding: 55px 18px 70px;
+    }
+
+    .cart-hero h1 {
+        font-size: 36px;
+    }
+
+    .cart-item {
+        grid-template-columns: 75px 1fr;
         gap: 15px;
     }
 
     .cart-item img {
-        width: 85px;
-        height: 105px;
-        object-fit: cover;
+        width: 75px;
+        height: 95px;
     }
 
     .cart-item-info h3 {
@@ -4103,87 +3099,7 @@ body {
         font-size: 10px;
     }
 
-    .remove-item {
-        grid-column: 2;
-        justify-self: start;
-    }
-
     .cart-summary {
-        width: 100%;
         padding: 25px;
-    }
-
-
-    /* FOOTER */
-    .footer-main {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        padding: 50px 20px;
-    }
-}
-
-
-/* ================= SMALL PHONES ================= */
-
-@media (max-width: 500px) {
-
-    .navbar {
-        padding: 15px 12px;
-    }
-
-    .navbar nav {
-        gap: 9px;
-    }
-
-    .navbar nav a {
-        font-size: 8px;
-    }
-
-    .logo span {
-        font-size: 19px;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero-image img {
-        height: 360px;
-    }
-
-    .shop-header h1 {
-        font-size: 37px;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 18px 10px;
-        padding: 20px 10px;
-    }
-
-    .product-image img {
-        height: 200px;
-    }
-
-    .product-info h2 {
-        font-size: 14px;
-    }
-
-    .cart-hero h1 {
-        font-size: 36px;
-    }
-
-    .cart-item {
-        grid-template-columns: 75px 1fr;
-    }
-
-    .cart-item img {
-        width: 75px;
-        height: 95px;
-    }
-
-    .footer-main {
-        grid-template-columns: 1fr;
-        text-align: center;
     }
 }
